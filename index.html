@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>深海脉冲 Deeppulse · 表盘作品集</title>
+<style>
+  :root{
+    --bg:#0a0c11; --card:#141821; --line:#232a36;
+    --tx:#eef1f6; --sub:#a9b1c0; --weak:#6f7889;
+    --accent:#45cfff; --accent2:#ff8fa9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg); color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  header{padding:80px 0 40px;text-align:center;}
+  .kicker{
+    display:inline-block;font-size:12px;letter-spacing:.24em;color:var(--accent);
+    border:1px solid rgba(69,207,255,.32);border-radius:999px;padding:5px 14px;margin-bottom:22px;
+  }
+  h1{font-size:44px;line-height:1.2;letter-spacing:-.02em;font-weight:700;}
+  h1 span{display:block;font-size:16px;font-weight:400;color:var(--weak);letter-spacing:.12em;margin-top:12px;}
+  .lead{color:var(--sub);font-size:16px;max-width:620px;margin:22px auto 0;}
+  section{padding:56px 0;border-top:1px solid var(--line);}
+  h2{font-size:13px;letter-spacing:.2em;color:var(--weak);font-weight:600;margin-bottom:28px;text-transform:uppercase;}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+  .hero figure{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;text-align:center;}
+  .hero img{width:100%;border-radius:50%;display:block;}
+  .hero figcaption{margin-top:14px;font-size:13px;color:var(--weak);letter-spacing:.06em;}
+  .points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .point{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;}
+  .point h3{font-size:16px;margin-bottom:8px;font-weight:600;}
+  .point p{font-size:14px;color:var(--sub);line-height:1.65;}
+  .themes{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .themes img{width:100%;display:block;}
+  .themes p{margin:0;padding:16px 22px;font-size:13px;color:var(--weak);text-align:center;border-top:1px solid var(--line);}
+  .rows{display:grid;gap:0;}
+  .row{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);}
+  .row:last-child{border-bottom:0;}
+  .row dt{color:var(--weak);font-size:14px;}
+  .row dd{color:var(--tx);font-size:14px;}
+  .row dd em{font-style:normal;color:var(--accent);}
+  .about{display:grid;grid-template-columns:1fr;gap:10px;}
+  .about p{color:var(--sub);font-size:15px;}
+  .dl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .dl .meta{font-size:13px;color:var(--sub);line-height:1.8;}
+  .dl .meta b{color:var(--tx);font-weight:600;font-size:15px;}
+  .dl .meta i{font-style:normal;color:var(--weak);}
+  .btn{
+    display:inline-block;text-decoration:none;color:#06202b;background:var(--accent);
+    font-size:14px;font-weight:600;padding:11px 22px;border-radius:999px;white-space:nowrap;
+  }
+  .btn:hover{background:#7bdcff;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .tag{font-size:12px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:4px 12px;}
+  footer{padding:48px 0 72px;text-align:center;color:var(--weak);font-size:12px;letter-spacing:.08em;}
+  @media (max-width:720px){
+    h1{font-size:32px;}
+    .hero{grid-template-columns:1fr;}
+    .points{grid-template-columns:1fr;}
+    .row{grid-template-columns:1fr;gap:4px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="kicker">WATCH FACE</div>
+  <h1>深海脉冲<span>DEEPPULSE</span></h1>
+  <p class="lead">
+    为 vivo / iQOO 蓝河（BlueOS）圆表设计的数字表盘。以低饱和深海色打底、单一强调色提亮，
+    把步数、活动、热量、站立四项数据压进一枚悬浮胶囊，四环进度全部用真实圆弧绘制。
+    设计基准 466×466，支持九套配色切换与 AOD 常亮。
+  </p>
+</header>
+
+<section class="wrap">
+  <h2>表盘预览</h2>
+  <div class="hero">
+    <figure>
+      <img src="img/hero-black.png" alt="深海脉冲 墨黑配色" />
+      <figcaption>墨黑（默认）</figcaption>
+    </figure>
+    <figure>
+      <img src="img/hero-pink.png" alt="深海脉冲 藕粉配色" />
+      <figcaption>藕粉</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>设计要点</h2>
+  <div class="points">
+    <div class="point">
+      <h3>四环真圆弧</h3>
+      <p>步数 / 活动时间 / 热量 / 站立四层进度环用 canvas 的 arc 绘制，不是分段矩形拼的折线，
+         任意百分比下外缘都是正圆；相邻环留 4px 净间隙，四层不粘连。</p>
+    </div>
+    <div class="point">
+      <h3>贴边极坐标刻度</h3>
+      <p>左侧气压、右侧海拔沿表盘边缘以 12 段、−68°~−116° 的角度范围排布，
+         数值与刻度分离，读写不互相干扰；底部日出日落沿 R=201 弧线逐字旋转。</p>
+    </div>
+    <div class="point">
+      <h3>纯矢量图形</h3>
+      <p>脚印、杠铃、火焰、立姿人四个图标与全部装饰均由样式绘制，不依赖图片资源，
+         也不使用 emoji 字符，避免手表端字库缺失渲染成方框。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>九套配色</h2>
+  <div class="themes">
+    <img src="img/themes.png" alt="九套配色对照" />
+    <p>墨黑 · 藕粉 · 雾青 · 粉米 · 灰紫 · 午夜靛 · 月白 · 雾紫暮 · 深海青 —— 点四环环心循环切换，配色随本地存储保留</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>技术规格</h2>
+  <dl class="rows">
+    <div class="row"><dt>适配设备</dt><dd>vivo / iQOO 手表，<em>watch-round 466×466</em> 圆表</dd></div>
+    <div class="row"><dt>开发方式</dt><dd>BlueOS Studio + <em>.ux</em> 单文件组件（template / script / less）</dd></div>
+    <div class="row"><dt>包名 / 版本</dt><dd>com.lisixin.watch.deeppulse · v1.5.6</dd></div>
+    <div class="row"><dt>安全区</dt><dd>80px 整行时间包围盒四角距圆心最远 229.1（半径 233），全元素逐点核算</dd></div>
+    <div class="row"><dt>功耗处理</dt><dd>AOD 常亮下心率 / 电量 / 日月面板降频至每 5 分钟；气压回调与主题重建分帧执行</dd></div>
+    <div class="row"><dt>健壮性</dt><dd>canvas 取不到上下文时只丢进度、不丢环；存储缺失时主题回落默认色，全程不崩</dd></div>
+  </dl>
+</section>
+
+<section class="wrap">
+  <h2>构建产物</h2>
+  <div class="dl">
+    <div class="meta">
+      <b>深海脉冲 · rpk 安装包</b><br />
+      versionName 1.0.0 · versionCode 10 · 2026-11-05 构建<br />
+      <i>包名 com.lisixin.watch.bluetide（历史命名，当前开发分支为 deeppulse）</i>
+    </div>
+    <a class="btn" href="builds/com.lisixin.watch.bluetide.release.production.1.0.0(10).rpk" download>下载 rpk</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>关于作者</h2>
+  <div class="about">
+    <p>独立表盘开发者，专注信息型数字表盘：把尽可能多的数据放进一眼能读完的层级里，
+       而不是靠装饰堆视觉。开发环境为 BlueOS Studio，作品均在自己的真机上完成渲染、功耗与 AOD 自查。</p>
+    <p>作品全部原创，图形与图标为自行绘制，不含第三方素材。</p>
+    <div class="tags">
+      <span class="tag">数字表盘</span>
+      <span class="tag">极简</span>
+      <span class="tag">多配色</span>
+      <span class="tag">信息型</span>
+      <span class="tag">vivo / BlueOS</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  深海脉冲 Deeppulse · 作品集 · 更新于 2026 年 11 月
+</footer>
+
+</body>
+</html>
